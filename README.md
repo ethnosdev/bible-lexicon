@@ -44,12 +44,15 @@ scripts/
   ├── 02_export.py  -> Packs next batch of pending words into batches/current_batch.md ($0)
   ├── 03_import.py  -> Validates AI JSON & verse citations, commits to lexicon.db ($0)
   ├── 04_status.py  -> Displays completion progress across tiers ($0)
-  └── 05_publish.py -> Exports clean CC0 deliverables (JSON/JSONL) to exports/ ($0)
+  ├── 05_publish.py -> Exports clean CC0 deliverables (JSON/JSONL) to exports/ ($0)
+  ├── 06_verify.py  -> Runs deterministic verification & benchmark alignment ($0)
+  └── 07_build_site.py -> Generates JSON bundles for the static review site ($0)
 GEMINI.md           -> Strict lexicographer rules & JSON output schema for the AI agent
 batches/            -> Outgoing primary-text evidence packets
 inbox/              -> Incoming AI JSON responses awaiting validation
 lexicon.db          -> Master SQLite database & resumable state queue
 exports/            -> Published public-domain outputs
+site/               -> Static expert review website (HTML/CSS/JS + generated data/)
 ```
 
 ### Priority Tiers
@@ -94,6 +97,17 @@ python3 scripts/03_import.py
 Publish clean public-domain outputs (`exports/lexicon.json` and `exports/lexicon.jsonl`):
 ```bash
 python3 scripts/05_publish.py
+```
+
+Run deterministic verification on Tier 1 entries (and flag anomalies to `needs_review`):
+```bash
+python3 scripts/06_verify.py --tier 1 --apply-flags
+```
+
+Build and preview the static expert review website locally:
+```bash
+python3 scripts/07_build_site.py
+python3 -m http.server -d site 8000
 ```
 
 ---

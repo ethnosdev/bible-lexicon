@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empirical Biblical Lexicon — Tier 1 Pilot Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Frank+Ruhl+Libre:wght@400;500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-badge">CC0 1.0 Pilot</span>
+        <div>
+          <h1>Empirical Public-Domain Biblical Lexicon</h1>
+          <p class="subtitle">Clean-room Greek, Hebrew &amp; Aramaic lexicography from primary texts</p>
+        </div>
+      </div>
+      <nav class="tabs" aria-label="Primary sections">
+        <button class="tab-btn active" data-tab="overview">Project &amp; Scorecard</button>
+        <button class="tab-btn" data-tab="tier1">Tier 1 Inspector <span id="tab-tier1-count" class="tab-pill">696</span></button>
+        <button class="tab-btn" data-tab="corpus">All Lemmas <span id="tab-corpus-count" class="tab-pill">14,042</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- TAB 1: OVERVIEW & SCORECARD -->
+    <section id="tab-overview" class="tab-panel active">
+      <div class="hero-card">
+        <div>
+          <h2>Why This Pilot Exists</h2>
+          <p>
+            Modern scholarly biblical lexicons (<strong>BDAG</strong>, <strong>HALOT</strong>, <strong>DCH</strong>) are copyrighted and restricted, while classic public-domain lexicons (<strong>Strong’s</strong>, <strong>BDB</strong>, <strong>Thayer’s</strong>) are over a century old and often rely on outdated comparative etymology and root fallacies.
+          </p>
+          <p>
+            This project tests an <strong>empirical, clean-room alternative</strong>: deriving senses, grammatical frames, semantic domains, and collocations strictly from primary ancient sentences (<strong>Nestle 1904</strong> Greek NT and <strong>Westminster Leningrad Codex</strong> Hebrew/Aramaic OT), with every sense backed by verified verse citations and released into the <strong>Public Domain (CC0 1.0)</strong>.
+          </p>
+        </div>
+        <div class="eval-callout">
+          <h3>Expert Evaluation Goal</h3>
+          <p>
+            <strong>Tier 1</strong> covers every word occurring in <strong>Jonah</strong> (OT) and <strong>Philippians</strong> (NT)—<strong>696 lemmas</strong> across both testaments—to validate whether empirical quality justifies scaling to the remaining <strong>13,346 biblical lemmas</strong>.
+          </p>
+          <div class="callout-actions">
+            <button class="btn btn-primary" data-jump-preset="all">Browse All 696 Tier 1 Entries</button>
+            <button class="btn btn-warn" data-jump-preset="needs_review">Inspect 7 Flagged Entries</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="overview-metrics" class="stats-grid"></div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Pipeline &amp; Clean-Room Guardrails</h3>
+          <ol class="pipeline-list">
+            <li><strong>Primary-Text Ingestion (<code>01_ingest.py</code>):</strong> Loads 607,255 tokens from Nestle 1904 (PD/CC0) and WLC (PD). Third-party glosses (Macula Hebrew CC BY, Dodson Greek CC0) are isolated in <code>benchmark_hidden</code> and never shown to the AI.</li>
+            <li><strong>Stratified Evidence Packets (<code>02_export.py</code>):</strong> Packs pending lemmas with up to 25–40 primary-text sentences marking target occurrences with <code>【...】</code>.</li>
+            <li><strong>Empirical Synthesis (<code>GEMINI.md</code> rules):</strong> Prohibits imitating copyrighted lexicons, guessing from 3-letter roots, or fabricating references; requires honest <code>low</code> confidence on ambiguous rare words.</li>
+            <li><strong>Deterministic Verification (<code>06_verify.py</code>):</strong> Validates every cited verse against <code>tokens</code>, checks Hebrew verb stem coverage against <code>morph_note</code>, lints clean-room rules, and scores alignment against <code>benchmark_hidden</code>.</li>
+            <li><strong>CC0 Publication (<code>05_publish.py</code>):</strong> Exports clean public-domain JSON/JSONL deliverables with zero third-party gloss leakage.</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h3>Pilot Findings &amp; Automated Audit Notes</h3>
+          <div id="verification-summary-box"></div>
+          <div class="finding-box">
+            <h4>Key Pilot Observation: Verb Stem Sampling</h4>
+            <p>
+              All <strong>696</strong> Tier 1 entries passed citation, schema, and clean-room rule checks (0 hallucinated verses, 0 lexicon leaks). However, automated stem verification flagged <strong>7 high-frequency Hebrew verbs</strong> (e.g., <code>עָשָׂה</code>, <code>בּוֹא</code>, <code>הָיָה</code>, <code>שׁוּב</code>) where uniform 40-verse sampling missed a less-frequent stem like <em>Niphal</em> or <em>Hophal</em>. Stratifying future evidence packets by verb stem will fix this before scaling to Tiers 2–4.
+            </p>
+            <div class="quick-links">
+              <button class="btn btn-sm" data-jump-preset="needs_review">View 7 Flagged Verbs</button>
+              <button class="btn btn-sm" data-jump-preset="divergent">View 13 Benchmark Divergences</button>
+              <button class="btn btn-sm" data-jump-preset="low_conf">View 43 Low-Confidence Entries</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Corpus Progress by Priority Tier</h3>
+        <div id="tier-table-wrap"></div>
+      </div>
+    </section>
+
+    <!-- TAB 2: TIER 1 INSPECTOR -->
+    <section id="tab-tier1" class="tab-panel">
+      <div class="controls-card">
+        <div class="presets-bar" id="tier1-presets">
+          <span class="preset-label">Quick Spot-Checks:</span>
+          <button class="preset-btn active" data-preset="all">All Tier 1 (696)</button>
+          <button class="preset-btn" data-preset="needs_review">Needs Review (7)</button>
+          <button class="preset-btn" data-preset="divergent">Benchmark Divergent (13)</button>
+          <button class="preset-btn" data-preset="missing_stems">Missing Verb Stems (29)</button>
+          <button class="preset-btn" data-preset="low_conf">Low Confidence / Hapax (43)</button>
+          <button class="preset-btn" data-preset="sample_theology">Sample Theological &amp; Pilot Terms</button>
+        </div>
+
+        <div class="filter-row">
+          <input id="t1-search" type="search" placeholder="Search Greek, Hebrew, transliteration, English gloss, or ID (accents optional)..." />
+          <select id="t1-lang">
+            <option value="">All Languages</option>
+            <option value="greek">Greek (443)</option>
+            <option value="hebrew">Hebrew (253)</option>
+          </select>
+          <select id="t1-book">
+            <option value="">Jonah &amp; Philippians</option>
+            <option value="JON">Jonah (OT)</option>
+            <option value="PHP">Philippians (NT)</option>
+          </select>
+          <select id="t1-conf">
+            <option value="">All Confidence</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+          </select>
+          <select id="t1-verif">
+            <option value="">All Verification</option>
+            <option value="clean">Fully Clean (650)</option>
+            <option value="any_issue">Any Flag or Warning (46)</option>
+            <option value="needs_review">Needs Review (7)</option>
+            <option value="divergent">Benchmark Divergent (13)</option>
+          </select>
+          <select id="t1-pos">
+            <option value="">All POS</option>
+          </select>
+        </div>
+        <div class="results-meta">
+          <span id="t1-count-label">Showing 696 of 696 entries</span>
+          <label class="toggle-inline">
+            <input type="checkbox" id="toggle-expand-verses" />
+            Expand cited verse texts automatically
+          </label>
+        </div>
+      </div>
+
+      <div class="inspector-layout">
+        <aside class="lemma-list" id="t1-list" aria-label="Tier 1 lemmas"></aside>
+        <article class="entry-detail" id="t1-detail">
+          <div class="empty-state">Select a lemma from the list to inspect its senses, cited verses, and verification audit.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TAB 3: ALL 14,042 LEMMAS -->
+    <section id="tab-corpus" class="tab-panel">
+      <div class="controls-card">
+        <div class="filter-row">
+          <input id="all-search" type="search" placeholder="Search any of the 14,042 biblical lemmas (Greek, Hebrew, Aramaic, ID, or Tier 1 gloss)..." />
+          <select id="all-lang">
+            <option value="">All Languages</option>
+            <option value="hebrew">Hebrew (7,943)</option>
+            <option value="greek">Greek (5,401)</option>
+            <option value="aramaic">Aramaic (698)</option>
+          </select>
+          <select id="all-tier">
+            <option value="">All Tiers</option>
+            <option value="1">Tier 1 — Pilot (696)</option>
+            <option value="2">Tier 2 — 10+ occ (3,044)</option>
+            <option value="3">Tier 3 — 3–9 occ (3,630)</option>
+            <option value="4">Tier 4 — 1–2 occ (6,672)</option>
+          </select>
+          <select id="all-status">
+            <option value="">All Statuses</option>
+            <option value="drafted">drafted</option>
+            <option value="needs_review">needs_review</option>
+            <option value="exported">exported</option>
+            <option value="pending">pending</option>
+          </select>
+        </div>
+        <div class="results-meta">
+          <span id="all-count-label">Loading full lemma index...</span>
+          <span class="muted">Showing top 150 matching results per view for fast browsing.</span>
+        </div>
+      </div>
+
+      <div class="inspector-layout">
+        <aside class="lemma-list" id="all-list" aria-label="All biblical lemmas"></aside>
+        <article class="entry-detail" id="all-detail">
+          <div class="empty-state">Select any lemma to inspect its corpus frequency, tier, and primary-text occurrences.</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Generated empirical lexicon entries &amp; scripts are dedicated to the Public Domain (<strong>CC0 1.0</strong>).
+      Primary texts: <strong>Nestle 1904</strong> (PD/CC0) &amp; <strong>Westminster Leningrad Codex</strong> (PD).
+      Toggleable verification benchmarks: <strong>Dodson Greek Lexicon</strong> (PD/CC0) &amp; <strong>Clear-Bible/macula-hebrew</strong> (CC BY 4.0, strictly separated for verification only).
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

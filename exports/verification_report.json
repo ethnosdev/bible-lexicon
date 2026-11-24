@@ -1,0 +1,838 @@
+{
+  "generated_at": "2026-11-24T19:51:35.919402+00:00",
+  "tier": 1,
+  "total_checked": 696,
+  "passed_hard_checks": 689,
+  "clean_no_warnings": 650,
+  "flagged_hard_count": 7,
+  "marked_needs_review": 7,
+  "benchmark_status_counts": {
+    "aligned": 683,
+    "divergent": 13
+  },
+  "hard_flag_counts": {
+    "missing_major_verb_stems": 7
+  },
+  "warning_counts": {
+    "benchmark_gloss_divergent": 13,
+    "single_occ_marked_medium": 4,
+    "missing_minor_verb_stems": 26
+  },
+  "flagged_entries": [
+    {
+      "lemma_id": 33,
+      "lang": "greek",
+      "lemma": "τίς",
+      "pos": "pron",
+      "total_count": 562,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 1622,
+      "lang": "greek",
+      "lemma": "ὀσμή",
+      "pos": "noun",
+      "total_count": 6,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 3503,
+      "lang": "greek",
+      "lemma": "Εὐοδία",
+      "pos": "noun",
+      "total_count": 1,
+      "confidence": "medium",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "single_occ_marked_medium"
+      ],
+      "benchmark_score": 0.333,
+      "benchmark_status": "aligned",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 3517,
+      "lang": "greek",
+      "lemma": "Κλήμης",
+      "pos": "noun",
+      "total_count": 1,
+      "confidence": "medium",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "single_occ_marked_medium"
+      ],
+      "benchmark_score": 0.6,
+      "benchmark_status": "aligned",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 3604,
+      "lang": "greek",
+      "lemma": "Συντύχη",
+      "pos": "noun",
+      "total_count": 1,
+      "confidence": "medium",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "single_occ_marked_medium"
+      ],
+      "benchmark_score": 0.2,
+      "benchmark_status": "aligned",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 3629,
+      "lang": "greek",
+      "lemma": "Φιλιππήσιος",
+      "pos": "noun",
+      "total_count": 1,
+      "confidence": "medium",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "single_occ_marked_medium"
+      ],
+      "benchmark_score": 0.667,
+      "benchmark_status": "aligned",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 3959,
+      "lang": "greek",
+      "lemma": "κατατομή",
+      "pos": "noun",
+      "total_count": 1,
+      "confidence": "low",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5408,
+      "lang": "hebrew",
+      "lemma": "אֵת",
+      "pos": "om",
+      "total_count": 11870,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5411,
+      "lang": "hebrew",
+      "lemma": "יהוה",
+      "pos": "noun",
+      "total_count": 6521,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5417,
+      "lang": "hebrew",
+      "lemma": "אָמַר",
+      "pos": "verb",
+      "total_count": 5308,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hiphil(2)"
+      ],
+      "benchmark_score": 0.486,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hiphil(2)"
+      ]
+    },
+    {
+      "lemma_id": 5420,
+      "lang": "hebrew",
+      "lemma": "כִּי",
+      "pos": "cj",
+      "total_count": 4484,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5421,
+      "lang": "hebrew",
+      "lemma": "הָיָה",
+      "pos": "verb",
+      "total_count": 3560,
+      "confidence": "high",
+      "passed": false,
+      "flags": [
+        "missing_major_verb_stems:niphal(20)"
+      ],
+      "warnings": [],
+      "benchmark_score": 0.5,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "niphal(20)"
+      ]
+    },
+    {
+      "lemma_id": 5426,
+      "lang": "hebrew",
+      "lemma": "עָשָׂה",
+      "pos": "verb",
+      "total_count": 2629,
+      "confidence": "high",
+      "passed": false,
+      "flags": [
+        "missing_major_verb_stems:niphal(99)"
+      ],
+      "warnings": [],
+      "benchmark_score": 0.394,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "niphal(99)"
+      ]
+    },
+    {
+      "lemma_id": 5429,
+      "lang": "hebrew",
+      "lemma": "בּוֹא",
+      "pos": "verb",
+      "total_count": 2558,
+      "confidence": "high",
+      "passed": false,
+      "flags": [
+        "missing_major_verb_stems:hophal(24)"
+      ],
+      "warnings": [],
+      "benchmark_score": 0.333,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(24)"
+      ]
+    },
+    {
+      "lemma_id": 5439,
+      "lang": "hebrew",
+      "lemma": "נָתַן",
+      "pos": "verb",
+      "total_count": 2010,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hophal(6),qal passive(2)"
+      ],
+      "benchmark_score": 0.338,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(6)",
+        "qal passive(2)"
+      ]
+    },
+    {
+      "lemma_id": 5450,
+      "lang": "hebrew",
+      "lemma": "רָאָה",
+      "pos": "verb",
+      "total_count": 1303,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hophal(4)"
+      ],
+      "benchmark_score": 0.44,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(4)"
+      ]
+    },
+    {
+      "lemma_id": 5455,
+      "lang": "hebrew",
+      "lemma": "שָׁמַע",
+      "pos": "verb",
+      "total_count": 1159,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:piel(2)"
+      ],
+      "benchmark_score": 0.609,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "piel(2)"
+      ]
+    },
+    {
+      "lemma_id": 5456,
+      "lang": "hebrew",
+      "lemma": "דָבַר",
+      "pos": "verb",
+      "total_count": 1141,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hiphil(2),hithpael(2),pual(2)"
+      ],
+      "benchmark_score": 0.28,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hiphil(2)",
+        "hithpael(2)",
+        "pual(2)"
+      ]
+    },
+    {
+      "lemma_id": 5458,
+      "lang": "hebrew",
+      "lemma": "יָשַׁב",
+      "pos": "verb",
+      "total_count": 1078,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hophal(2),niphal(8)"
+      ],
+      "benchmark_score": 0.579,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(2)",
+        "niphal(8)"
+      ]
+    },
+    {
+      "lemma_id": 5464,
+      "lang": "hebrew",
+      "lemma": "שׁוּב",
+      "pos": "verb",
+      "total_count": 1055,
+      "confidence": "high",
+      "passed": false,
+      "flags": [
+        "missing_major_verb_stems:polel(11)"
+      ],
+      "warnings": [
+        "missing_minor_verb_stems:hophal(5)"
+      ],
+      "benchmark_score": 0.519,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(5)",
+        "polel(11)"
+      ]
+    },
+    {
+      "lemma_id": 5465,
+      "lang": "hebrew",
+      "lemma": "עִם",
+      "pos": "prep",
+      "total_count": 1049,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5468,
+      "lang": "hebrew",
+      "lemma": "אֶחָד",
+      "pos": "num",
+      "total_count": 970,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5469,
+      "lang": "hebrew",
+      "lemma": "לָקַח",
+      "pos": "verb",
+      "total_count": 965,
+      "confidence": "high",
+      "passed": false,
+      "flags": [
+        "missing_major_verb_stems:niphal(11),pual(10)"
+      ],
+      "warnings": [
+        "missing_minor_verb_stems:hithpael(2),qal passive(5)"
+      ],
+      "benchmark_score": 0.677,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hithpael(2)",
+        "niphal(11)",
+        "pual(10)",
+        "qal passive(5)"
+      ]
+    },
+    {
+      "lemma_id": 5470,
+      "lang": "hebrew",
+      "lemma": "יָדַע",
+      "pos": "verb",
+      "total_count": 942,
+      "confidence": "high",
+      "passed": false,
+      "flags": [
+        "missing_major_verb_stems:niphal(41)"
+      ],
+      "warnings": [
+        "missing_minor_verb_stems:hithpael(2),hophal(3),pual(6)"
+      ],
+      "benchmark_score": 0.396,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hithpael(2)",
+        "hophal(3)",
+        "niphal(41)",
+        "pual(6)"
+      ]
+    },
+    {
+      "lemma_id": 5475,
+      "lang": "hebrew",
+      "lemma": "עָלָה",
+      "pos": "verb",
+      "total_count": 889,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hophal(3)"
+      ],
+      "benchmark_score": 0.387,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(3)"
+      ]
+    },
+    {
+      "lemma_id": 5485,
+      "lang": "hebrew",
+      "lemma": "אַיִן",
+      "pos": "adv",
+      "total_count": 805,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5489,
+      "lang": "hebrew",
+      "lemma": "קָרָא",
+      "pos": "verb",
+      "total_count": 772,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:pual(7)"
+      ],
+      "benchmark_score": 0.686,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "pual(7)"
+      ]
+    },
+    {
+      "lemma_id": 5496,
+      "lang": "hebrew",
+      "lemma": "אַתָּה",
+      "pos": "pron",
+      "total_count": 747,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5511,
+      "lang": "hebrew",
+      "lemma": "נָשָׂא",
+      "pos": "verb",
+      "total_count": 650,
+      "confidence": "high",
+      "passed": false,
+      "flags": [
+        "missing_major_verb_stems:piel(12)"
+      ],
+      "warnings": [
+        "missing_minor_verb_stems:hiphil(2)"
+      ],
+      "benchmark_score": 0.429,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hiphil(2)",
+        "piel(12)"
+      ]
+    },
+    {
+      "lemma_id": 5517,
+      "lang": "hebrew",
+      "lemma": "קוּם",
+      "pos": "verb",
+      "total_count": 627,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hophal(3)"
+      ],
+      "benchmark_score": 0.521,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(3)"
+      ]
+    },
+    {
+      "lemma_id": 5519,
+      "lang": "hebrew",
+      "lemma": "זֹאת",
+      "pos": "adj",
+      "total_count": 604,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5539,
+      "lang": "hebrew",
+      "lemma": "עָמַד",
+      "pos": "verb",
+      "total_count": 525,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hophal(2)"
+      ],
+      "benchmark_score": 0.49,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(2)"
+      ]
+    },
+    {
+      "lemma_id": 5548,
+      "lang": "hebrew",
+      "lemma": "נָכָה",
+      "pos": "verb",
+      "total_count": 501,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:pual(2)"
+      ],
+      "benchmark_score": 0.619,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "pual(2)"
+      ]
+    },
+    {
+      "lemma_id": 5563,
+      "lang": "hebrew",
+      "lemma": "מָצָא",
+      "pos": "verb",
+      "total_count": 453,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hiphil(7)"
+      ],
+      "benchmark_score": 0.381,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hiphil(7)"
+      ]
+    },
+    {
+      "lemma_id": 5566,
+      "lang": "hebrew",
+      "lemma": "נָפַל",
+      "pos": "verb",
+      "total_count": 434,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hithpael(5)"
+      ],
+      "benchmark_score": 0.577,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hithpael(5)"
+      ]
+    },
+    {
+      "lemma_id": 5578,
+      "lang": "hebrew",
+      "lemma": "עָנָה",
+      "pos": "verb",
+      "total_count": 411,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hiphil(3)"
+      ],
+      "benchmark_score": 0.5,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hiphil(3)"
+      ]
+    },
+    {
+      "lemma_id": 5592,
+      "lang": "hebrew",
+      "lemma": "יָרֵא",
+      "pos": "verb",
+      "total_count": 378,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:piel(5)"
+      ],
+      "benchmark_score": 0.529,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "piel(5)"
+      ]
+    },
+    {
+      "lemma_id": 5601,
+      "lang": "hebrew",
+      "lemma": "אָנֹכִי",
+      "pos": "pron",
+      "total_count": 359,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    },
+    {
+      "lemma_id": 5649,
+      "lang": "hebrew",
+      "lemma": "קָרַב",
+      "pos": "verb",
+      "total_count": 283,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:niphal(2)"
+      ],
+      "benchmark_score": 0.647,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "niphal(2)"
+      ]
+    },
+    {
+      "lemma_id": 5698,
+      "lang": "hebrew",
+      "lemma": "רָבָה",
+      "pos": "verb",
+      "total_count": 225,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:piel(4)"
+      ],
+      "benchmark_score": 0.68,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "piel(4)"
+      ]
+    },
+    {
+      "lemma_id": 5718,
+      "lang": "hebrew",
+      "lemma": "נָצַל",
+      "pos": "verb",
+      "total_count": 213,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hophal(2),piel(4)"
+      ],
+      "benchmark_score": 0.538,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hophal(2)",
+        "piel(4)"
+      ]
+    },
+    {
+      "lemma_id": 5719,
+      "lang": "hebrew",
+      "lemma": "שָׁכַב",
+      "pos": "verb",
+      "total_count": 212,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:niphal(2)"
+      ],
+      "benchmark_score": 0.5,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "niphal(2)"
+      ]
+    },
+    {
+      "lemma_id": 5826,
+      "lang": "hebrew",
+      "lemma": "נָגַע",
+      "pos": "verb",
+      "total_count": 150,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:piel(3)"
+      ],
+      "benchmark_score": 0.545,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "piel(3)"
+      ]
+    },
+    {
+      "lemma_id": 5855,
+      "lang": "hebrew",
+      "lemma": "חָלַל",
+      "pos": "verb",
+      "total_count": 141,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:poel(2)"
+      ],
+      "benchmark_score": 0.571,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "poel(2)"
+      ]
+    },
+    {
+      "lemma_id": 6010,
+      "lang": "hebrew",
+      "lemma": "רָעַע",
+      "pos": "verb",
+      "total_count": 101,
+      "confidence": "high",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "missing_minor_verb_stems:hithpolel(2)"
+      ],
+      "benchmark_score": 0.444,
+      "benchmark_status": "aligned",
+      "missing_stems": [
+        "hithpolel(2)"
+      ]
+    },
+    {
+      "lemma_id": 17560,
+      "lang": "hebrew",
+      "lemma": "חֲרִישִׁי",
+      "pos": "adj",
+      "total_count": 1,
+      "confidence": "low",
+      "passed": true,
+      "flags": [],
+      "warnings": [
+        "benchmark_gloss_divergent"
+      ],
+      "benchmark_score": 0.0,
+      "benchmark_status": "divergent",
+      "missing_stems": []
+    }
+  ]
+}
